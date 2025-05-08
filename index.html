@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Open When...</title>
+	<link rel="icon" href="letter-icon.png" type="image/png">
+	<link rel="stylesheet" href="style.css">	
+</head>
+<body>
+	<audio id="bg-music" src="aud/clouded.mp3.mp3" autoplay loop></audio>
+	<button onclick="document.getElementById('bg-music').play()">Play Music</button>
+
+	<div class="container">
+		<h1>Open When...</h1>
+		<div class="envelopes">
+			<button onclick="openLetter('sad')">You're Sad</button>
+			<button onclick="openLetter('miss')">You Miss Me</button>
+			<button onclick="openLetter('tired')">You're Tired</button>
+			<button onclick="askPassword()">You Really Need Me (Locked)</button>
+		</div>
+	</div>
+
+	<div class="popup" id="popup">
+		<div class="popup-content">
+			<span class="close" onclick="closePopup()">*</span>
+			<p id="message"></p>
+			<audio id="voice" controls style="display: none;"></audio>
+		</div>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+</html>
